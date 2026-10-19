@@ -33,14 +33,14 @@ graph.add_edge('chat_node', END)
 
 chatbot = graph.compile(checkpointer=checkpointer)
 
-thread_id = '1'
-while True:
-    user_message = input('Type here: ')
+# thread_id = '1'
+# while True:
+#     user_message = input('Type here: ')
 
-    if user_message in ['exit','bye','quit']:
-        break
+#     if user_message in ['exit','bye','quit']:
+#         break
 
-    config = {'configurable': {'thread_id': thread_id}}
-    llm_response = chatbot.invoke({'messages':[HumanMessage(content=user_message)]}, config=config)
+#     config = {'configurable': {'thread_id': thread_id}}
+#     llm_response = chatbot.invoke({'messages':[HumanMessage(content=user_message)]}, config=config)
 
-    print('AI: ', llm_response['messages'][-1].content)
+#     print('AI: ', llm_response['messages'][-1].content)
